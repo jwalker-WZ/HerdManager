@@ -16,3 +16,4 @@ C:\Users\jonathan\Documents\GitHub\HerdManager\HerdManager\bin\HerdManager.pdb
 C:\Users\jonathan\Documents\GitHub\HerdManager\HerdManager\obj\Debug\HerdManager.csprojResolveAssemblyReference.cache
 C:\Users\jonathan\Documents\GitHub\HerdManager\HerdManager\obj\Debug\HerdManager.dll
 C:\Users\jonathan\Documents\GitHub\HerdManager\HerdManager\obj\Debug\HerdManager.pdb
+C:\Users\jonathan\Documents\GitHub\HerdManager\HerdManager\bin\MySql.Web.v20.dll

@@ -25,7 +25,11 @@ namespace HerdManager.UserStatus
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-
+            DatabaseStuff.DataBaseHelper.Connect();
+            if (DatabaseStuff.DataBaseHelper.RegisterUser(txtUserName.Text, txtPassword.Text, txtFirstName.Text, txtLastName.Text))
+            {
+                Response.Redirect("/Site/Main.aspx");
+            }
         }
     }
 }

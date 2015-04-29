@@ -62,6 +62,7 @@
     <Content Include="css\Content.css" />
     <Content Include="css\MasterPage.css" />
     <Content Include="Images\54-Free-Cartoon-Sheep-Clipart-Illustration.png" />
+    <Content Include="Site\DatabaseTesting.aspx" />
     <Content Include="UserStatus\Login.aspx" />
     <Content Include="Site\Main.aspx" />
     <Content Include="Site\NewAnimal.aspx" />
@@ -78,6 +79,13 @@
     </Compile>
     <Compile Include="HeardManager.Master.designer.cs">
       <DependentUpon>HeardManager.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site\DatabaseTesting.aspx.cs">
+      <DependentUpon>DatabaseTesting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\DatabaseTesting.aspx.designer.cs">
+      <DependentUpon>DatabaseTesting.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserStatus\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

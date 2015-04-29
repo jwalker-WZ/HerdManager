@@ -31,6 +31,7 @@
                </td>
                <td>
                    <asp:LinkButton ID="lbtnRegister" runat="server" Text="Register" PostBackUrl="~/UserStatus/Register.aspx"></asp:LinkButton>
+                   <asp:Label ID="lblLogInFailed" runat="server"></asp:Label>
                </td>
            </tr>
        </table>

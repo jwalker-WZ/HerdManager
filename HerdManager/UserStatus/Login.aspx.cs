@@ -22,7 +22,15 @@ namespace HerdManager.UserStatus
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-
+            DatabaseStuff.DataBaseHelper.Connect();
+            if (DatabaseStuff.DataBaseHelper.LogIn(txtUserName.Text, txtPassword.Text))
+            {
+                Response.Redirect("/Site/Main.aspx");
+            }
+            else
+            {
+                lblLogInFailed.Text = "Login Failed!";
+            }
         }
 
     }

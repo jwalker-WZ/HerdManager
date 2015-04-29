@@ -16,6 +16,12 @@ namespace HerdManager.DatabaseStuff
         MySqlDataAdapter da;
         MySqlDataReader dr;
 
+        static bool Connect()
+        {
+            return false;
+        }
+
+        
 
     }
 }

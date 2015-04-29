@@ -13,49 +13,13 @@ namespace HerdManager.UserStatus {
     public partial class Main {
         
         /// <summary>
-        /// tblHerd control.
+        /// gdvAnimals control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Table tblHerd;
-        
-        /// <summary>
-        /// ID control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TableRow ID;
-        
-        /// <summary>
-        /// mhc control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TableRow mhc;
-        
-        /// <summary>
-        /// xgfhjk control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TableRow xgfhjk;
-        
-        /// <summary>
-        /// sdfsd control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TableRow sdfsd;
+        protected global::System.Web.UI.WebControls.GridView gdvAnimals;
         
         /// <summary>
         /// lbtnAddNew control.

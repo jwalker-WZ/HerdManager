@@ -11,7 +11,9 @@ namespace HerdManager.UserStatus
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            DatabaseStuff.DataBaseHelper.Connect();
+            gdvAnimals.DataSource = DatabaseStuff.DataBaseHelper.GetAllAnimals();
+            gdvAnimals.DataBind();
         }
     }
 }

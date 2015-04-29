@@ -5,12 +5,13 @@ using System.Web;
 using MySql.Data;
 using MySql.Data.MySqlClient;
 using MySql.Data.Common;
+using System.Data;
 
 namespace HerdManager.DatabaseStuff
 {
     public static class DataBaseHelper
     {
-        static string connString = "Server=rei.cs.ndsu.nodak.edu;Database=csci366_hmanager;Uid=csci366_hmanager;Pwd=stuffnotvisible;";
+        static string connString = "Server=rei.cs.ndsu.nodak.edu;Database=csci366_hmanager;Uid=csci366_hmanager;Pwd=;";
         static MySqlConnection conn;
         static MySqlCommand comm;
         static MySqlDataAdapter da;
@@ -104,12 +105,14 @@ namespace HerdManager.DatabaseStuff
                 comm.Parameters["@Password"].Value = Password;
                 try
                 {
-                    int numrows = comm.ExecuteNonQuery();
-                    if (numrows == 0)
+                    DataTable dt = new DataTable();
+                    da = new MySqlDataAdapter(comm);
+                    da.Fill(dt);
+                    if (dt.Rows.Count == 1)
                     {
-                        return false;
+                        return true;
                     }
-                    return true;
+                    return false;
                 }catch(Exception e){return false;}
             }
             else
@@ -117,5 +120,27 @@ namespace HerdManager.DatabaseStuff
                 return false;
             }
         }
+
+        public static DataTable GetAllAnimals()
+        {
+            if (conn.State == ConnectionState.Open)
+            {
+                string commandString = "SELECT * FROM AccountHolder";
+                comm = new MySqlCommand(commandString, conn);
+                da = new MySqlDataAdapter(comm);
+                DataTable dt = new DataTable();
+                try
+                {
+                    da.Fill(dt);
+                    return dt;
+                }
+                catch (Exception ex) { return null; }
+            }
+            else
+            {
+                return null;
+            }
+        }
+        
     }
 }

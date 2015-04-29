@@ -61,9 +61,9 @@
     <Content Include="css\MasterPage.css" />
     <Content Include="Images\54-Free-Cartoon-Sheep-Clipart-Illustration.png" />
     <Content Include="UserStatus\Login.aspx" />
-    <Content Include="UserStatus\Main.aspx" />
-    <Content Include="UserStatus\NewAnimal.aspx" />
-    <Content Include="UserStatus\Pasture.aspx" />
+    <Content Include="Site\Main.aspx" />
+    <Content Include="Site\NewAnimal.aspx" />
+    <Content Include="Site\Pasture.aspx" />
     <Content Include="UserStatus\Register.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -83,25 +83,25 @@
     <Compile Include="UserStatus\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="UserStatus\Main.aspx.cs">
+    <Compile Include="Site\Main.aspx.cs">
       <DependentUpon>Main.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserStatus\Main.aspx.designer.cs">
+    <Compile Include="Site\Main.aspx.designer.cs">
       <DependentUpon>Main.aspx</DependentUpon>
     </Compile>
-    <Compile Include="UserStatus\NewAnimal.aspx.cs">
+    <Compile Include="Site\NewAnimal.aspx.cs">
       <DependentUpon>NewAnimal.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserStatus\NewAnimal.aspx.designer.cs">
+    <Compile Include="Site\NewAnimal.aspx.designer.cs">
       <DependentUpon>NewAnimal.aspx</DependentUpon>
     </Compile>
-    <Compile Include="UserStatus\Pasture.aspx.cs">
+    <Compile Include="Site\Pasture.aspx.cs">
       <DependentUpon>Pasture.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserStatus\Pasture.aspx.designer.cs">
+    <Compile Include="Site\Pasture.aspx.designer.cs">
       <DependentUpon>Pasture.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserStatus\Register.aspx.cs">

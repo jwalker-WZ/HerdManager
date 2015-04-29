@@ -10,3 +10,9 @@ C:\Users\Owner\Documents\CSCI 366\HerdManager\HerdManager\bin\HerdManager.pdb
 C:\Users\Owner\Documents\CSCI 366\HerdManager\HerdManager\obj\Debug\HerdManager.dll
 C:\Users\Owner\Documents\CSCI 366\HerdManager\HerdManager\obj\Debug\HerdManager.pdb
 C:\Users\Owner\Documents\CSCI 366\HerdManager\HerdManager\obj\Debug\HerdManager.csprojResolveAssemblyReference.cache
+C:\Users\jonathan\Documents\GitHub\HerdManager\HerdManager\bin\HerdManager.dll.config
+C:\Users\jonathan\Documents\GitHub\HerdManager\HerdManager\bin\HerdManager.dll
+C:\Users\jonathan\Documents\GitHub\HerdManager\HerdManager\bin\HerdManager.pdb
+C:\Users\jonathan\Documents\GitHub\HerdManager\HerdManager\obj\Debug\HerdManager.csprojResolveAssemblyReference.cache
+C:\Users\jonathan\Documents\GitHub\HerdManager\HerdManager\obj\Debug\HerdManager.dll
+C:\Users\jonathan\Documents\GitHub\HerdManager\HerdManager\obj\Debug\HerdManager.pdb

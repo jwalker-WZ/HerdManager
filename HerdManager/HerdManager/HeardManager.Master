@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="HeardManager.master.cs" Inherits="HerdManager.UserStatus.HeardManager" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder ID="Stylesheets" runat="server">
+        <link rel="stylesheet" href="/css/MasterPage.css" type="text/css" />
+        <link rel="stylesheet" href="/css/Content.css" type="text/css" />
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style2 {
+            width: 89px;
+        }
+        .auto-style3 {
+            width: 82px;
+        }
+        .auto-style4 {
+            font-size: xx-large;
+            color: #FF0066;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="StatusBar">
+        <div id="Logo" class="auto-style4"><strong>
+<asp:Image ID="Image1" runat="server" CssClass="logoImage" Height="92px" Width="137px" ImageUrl="~/Images/54-Free-Cartoon-Sheep-Clipart-Illustration.png" />
+</strong></div>
+        <div id="LoginInfo">
+            <table id="LoginTable">
+                <tr>
+                    <td class="auto-style3">
+                        <asp:LoginStatus ID="LoginStatus1" runat="server" OnLoggingOut="LoginStatus1_LoggingOut" />
+                    </td>
+                    <td class="auto-style2">
+                        <asp:LoginName ID="LoginName1" runat="server" />
+                    </td>
+                    <td>
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/UserStatus/Register.aspx">Register</asp:HyperLink>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+    <div style="height: 21px; margin-top: 57px">
+    </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

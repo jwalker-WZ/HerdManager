@@ -1,0 +1,36 @@
+﻿body {
+    background-color: lightblue;
+    margin: 0px 0px 0px 0px;
+    padding: 0px, 0px, 0px, 0px;
+}
+#StatusBar{
+    background-color: mediumpurple;
+    width: 100%;
+    height: 100px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px, 0px, 0px, 0px;
+}
+#Logo{
+    float: left;
+    width: 77%;
+    height: 100%;
+    background-color: white;
+    
+}
+#LoginInfo{
+    float: left;
+    width: 23%;
+    height: 100%;
+    background-color: cyan;
+}
+#LoginTable{
+    width: 100%;
+    height: 100%;
+}
+#LoginTable td{
+    background-color: lightcyan;
+}
+.logoImage{
+    width: auto;
+    height: 100%;
+}

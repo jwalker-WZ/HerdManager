@@ -141,6 +141,27 @@ namespace HerdManager.DatabaseStuff
                 return null;
             }
         }
+        public static bool AddAnimal(){
+            if (conn.State == ConnectionState.Open)
+            {
+                string commandString = "";
+                comm = new MySqlCommand(commandString, conn);
+                try
+                {
+                    int numRows = comm.ExecuteNonQuery();
+                    if (numRows == 0)
+                    {
+                        return false;
+                    }
+                }
+                catch (Exception ex) { return false; }
+            }
+            else
+            {
+                return false;
+            }
+            return true;
+        }
         
     }
 }

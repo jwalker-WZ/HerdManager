@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Web.Security;
 
 namespace HerdManager.UserStatus
 {
@@ -25,6 +26,7 @@ namespace HerdManager.UserStatus
             DatabaseStuff.DataBaseHelper.Connect();
             if (DatabaseStuff.DataBaseHelper.LogIn(txtUserName.Text, txtPassword.Text))
             {
+                
                 Response.Redirect("/Site/Main.aspx");
             }
             else

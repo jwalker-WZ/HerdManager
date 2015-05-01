@@ -1,11 +1,24 @@
-﻿body {
+﻿.outer {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
 }
-.centerdiv{
-   position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%);
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.LogInCenter {
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+}
+.NewAnimalCenter{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
 }
 #LogInTable{
     margin: 0% 25% 0% 25%;
@@ -15,4 +28,8 @@
 }
 #NBTable{
     margin:auto;
+}
+#NewAnimalTable{
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
 }

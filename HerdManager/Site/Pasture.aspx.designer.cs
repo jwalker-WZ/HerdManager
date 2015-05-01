@@ -13,24 +13,6 @@ namespace HerdManager.UserStatus {
     public partial class Pasture {
         
         /// <summary>
-        /// lblPastureID control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPastureID;
-        
-        /// <summary>
-        /// txtPastureID control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPastureID;
-        
-        /// <summary>
         /// lblPastureLocation control.
         /// </summary>
         /// <remarks>

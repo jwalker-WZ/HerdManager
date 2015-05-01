@@ -17,9 +17,14 @@ namespace HerdManager.UserStatus
         protected void btnClear_Click(object sender, EventArgs e)
         {
             txtPastureDescription.Text = "";
-            txtPastureID.Text = "";
             txtPastureLocation.Text = "";
             ddlFenceType.Text = "";
+        }
+
+        protected void btnSubmit_Click(object sender, EventArgs e)
+        {
+            DatabaseStuff.DataBaseHelper.Connect();
+            DatabaseStuff.DataBaseHelper.AddPasture(txtPastureLocation.Text, txtPastureDescription.Text, ddlFenceType.SelectedValue);
         }
     }
 }

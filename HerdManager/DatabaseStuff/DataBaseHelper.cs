@@ -162,6 +162,35 @@ namespace HerdManager.DatabaseStuff
             }
             return true;
         }
+
+        public static bool AddPasture(string location, string description, string fencetype)
+        {
+            if (conn.State == ConnectionState.Open)
+            {
+                string commandString = "INSERT INTO Pasture(Location, Description, FenceType) VALUES(@Location, @Description, @FenceType);";
+                comm = new MySqlCommand(commandString, conn);
+                comm.Parameters.Add("@Location", MySqlDbType.VarChar);
+                comm.Parameters.Add("@Description", MySqlDbType.VarChar);
+                comm.Parameters.Add("@FenceType", MySqlDbType.VarChar);
+                comm.Parameters["@Location"].Value = location;
+                comm.Parameters["@Description"].Value = description;
+                comm.Parameters["@FenceType"].Value = fencetype;
+                try
+                {
+                    int numRowsUpdate = comm.ExecuteNonQuery();
+                    if (numRowsUpdate == 0)
+                    {
+                        return false;
+                    }
+                }
+                catch (Exception ex) { return false; }
+            }
+            else
+            {
+                return false;
+            }
+            return true;
+        }
         
     }
 }

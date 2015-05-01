@@ -5,8 +5,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="outer">
         <div class="middle">
-            <div class="centerdiv">
-                <table id="NewAnimalCenter">
+            <div class="NewAnimalCenter">
+                <table id="NewAnimalTable">
                     <tr>
                         <td>
                             <asp:Label ID="lblAnimalInfo" runat="server" Text="Animal Information"></asp:Label>

@@ -19,7 +19,10 @@ namespace HerdManager.DatabaseStuff
 
         public static bool Connect()
         {
-            conn = new MySqlConnection(connString);
+            if(conn == null)
+                conn = new MySqlConnection(connString);
+            if (conn.State == ConnectionState.Open)
+                return true;
             try
             {
                 conn.Open();

@@ -18,7 +18,7 @@
 .NewAnimalCenter{
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
+    width: 40%;
 }
 #LogInTable{
     margin: 0% 25% 0% 25%;
@@ -31,4 +31,8 @@
 }
 #NewAnimalTable{
     background-color: gray;
+}
+#NewAnimalTable th{
+    background-color: black;
+    color: white;
 }

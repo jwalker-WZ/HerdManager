@@ -17,7 +17,6 @@ namespace HerdManager.UserStatus
         protected void btnClear_Click(object sender, EventArgs e)
         {
             
-            txtOffSpringDescription.Text = "";
             ddlAnimalSpecies.Text = "";
             ddlPastureLocation.Text = "";
         }

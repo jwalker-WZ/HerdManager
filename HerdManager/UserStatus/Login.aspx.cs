@@ -26,7 +26,7 @@ namespace HerdManager.UserStatus
             DatabaseStuff.DataBaseHelper.Connect();
             if (DatabaseStuff.DataBaseHelper.LogIn(txtUserName.Text, txtPassword.Text))
             {
-                
+                Session["UserName"] = txtUserName.Text; 
                 Response.Redirect("/Site/Main.aspx");
             }
             else

@@ -11,7 +11,17 @@ namespace HerdManager.UserStatus
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                List<string> SpeciesOptions = DatabaseStuff.DataBaseHelper.SpeciesOptions();
+                if (SpeciesOptions != null)
+                {
+                    foreach (string item in SpeciesOptions)
+                    {
+                        ddlAnimalSpecies.Items.Add(item);
+                    }
+                }
+            }
         }
 
         protected void btnClear_Click(object sender, EventArgs e)
@@ -23,7 +33,13 @@ namespace HerdManager.UserStatus
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-
+            bool returnValue = DatabaseStuff.DataBaseHelper.AddAnimal(ddlAnimalSpecies.SelectedValue, ddlGender.SelectedValue, Session["UserName"].ToString(),
+                calBirthDate.SelectedDate, calSellDeathDate.SelectedDate, txtTemperment.Text, txtNotes.Text, txtTagNumber.Text,
+                txtColor.Text, txtSpecialInformation.Text);
+            if (!returnValue)
+            {
+                lblFailed.Text = "Addition Failed!";
+            }
         }
     }
 }

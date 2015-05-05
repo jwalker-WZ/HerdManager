@@ -36,7 +36,11 @@
                             <asp:Label ID="lblGender" runat="server" Text="Gender"></asp:Label>
                         </td>
                         <td class="auto-style5">
-                            <asp:DropDownList ID="ddlGender" runat="server"></asp:DropDownList>
+                            <asp:DropDownList ID="ddlGender" runat="server">
+                                <asp:ListItem>Male</asp:ListItem>
+                                <asp:ListItem>Female</asp:ListItem>
+                                <asp:ListItem>Castrated</asp:ListItem>
+                            </asp:DropDownList>
                         </td>
                                                 <td>
                             <asp:Label ID="lblTagColor" runat="server" Text="Tag Color"></asp:Label>
@@ -98,6 +102,7 @@
                         </td>
                         <td class="auto-style5">
                             <asp:Button ID="btnClear" runat="server" Text="Clear" OnClick="btnClear_Click" />
+                            <asp:Label ID="lblFailed" runat="server"></asp:Label>
                         </td>
                     </tr>
                 </table>

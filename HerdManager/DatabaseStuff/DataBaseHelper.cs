@@ -11,7 +11,7 @@ namespace HerdManager.DatabaseStuff
 {
     public static class DataBaseHelper
     {
-        static string connString = "Server=rei.cs.ndsu.nodak.edu;Database=csci366_hmanager;Uid=csci366_hmanager;Pwd=;";
+        static string connString = "Server=rei.cs.ndsu.nodak.edu;Database=csci366_hmanager;Uid=csci366_hmanager;Pwd=fWm3gVtMWS;";
         static MySqlConnection conn;
         static MySqlCommand comm;
         static MySqlDataAdapter da;
@@ -144,16 +144,41 @@ namespace HerdManager.DatabaseStuff
                 return null;
             }
         }
-        public static bool AddAnimal(){
+        public static bool AddAnimal(string species, string gender, string accoundHolder, DateTime birthDate, DateTime sellodeath,
+            string temperment, string notes, string tagNumber, string tagColor, string specialInfo){
             if (conn.State == ConnectionState.Open)
             {
-                string commandString = "";
+                string commandString = "INSERT INTO Animal(Species, AccountHolder) "+
+                    "VALUES((SELECT ID FROM Species WHERE SpeciesName=@Species), "+
+                    "(SELECT ID FROM AccountHolder WHERE LogInInfo=(SELECT ID FROM HolderLogin WHERE Uname=@AccountHolder)));";
                 comm = new MySqlCommand(commandString, conn);
+                comm.Parameters.Add("@Species", MySqlDbType.VarChar);
+                comm.Parameters.Add("@AccountHolder", MySqlDbType.VarChar);
+                comm.Parameters["@Species"].Value = species;
+                comm.Parameters["@AccountHolder"].Value = accoundHolder;
                 try
                 {
                     int numRows = comm.ExecuteNonQuery();
                     if (numRows == 0)
                     {
+                        return false;
+                    }
+                }
+                catch (Exception ex) { return false; }
+                //create the tag
+                comm.CommandText = "INSERT INTO Tag(TagNumber, TagColor, SpecialInformation, AnimalID) VALUES(@TagNumber, @TagColor, @SpecialInfo" +
+                ", LAST_INSERT_ID());";
+                comm.Parameters.Add("@TagNumber", MySqlDbType.VarChar).Value = tagNumber;
+                comm.Parameters.Add("@TagColor", MySqlDbType.VarChar).Value = tagColor;
+                comm.Parameters.Add("@SpecialInfo", MySqlDbType.VarChar).Value = specialInfo;
+                try
+                {
+                    int numRows = comm.ExecuteNonQuery();
+                    if (numRows == 0)
+                    {
+                        //failed to work, erase last animal.
+                        comm.CommandText = "DELETE FROM Animal WHERE ID=LAST_INSERT_ID();";
+                        comm.ExecuteNonQuery();
                         return false;
                     }
                 }
@@ -194,6 +219,22 @@ namespace HerdManager.DatabaseStuff
             }
             return true;
         }
-        
+        public static List<string> SpeciesOptions()
+        {
+            List<string> species = new List<string>();
+            string commandString = "SELECT SpeciesName FROM Species;";
+            comm = new MySqlCommand(commandString, conn);
+            try
+            {
+                dr = comm.ExecuteReader();
+                while (dr.Read())
+                {
+                    species.Add(dr.GetString(0));
+                }
+            }
+            catch (Exception ex) { dr.Close();  return null; }
+            dr.Close();
+            return species;
+        }
     }
 }

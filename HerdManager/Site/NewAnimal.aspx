@@ -22,7 +22,18 @@
                             <asp:Label ID="lblAnimalSpecies" runat="server" Text="Species"></asp:Label>
                         </td>
                         <td class="auto-style5">
-                            <asp:DropDownList ID="ddlAnimalSpecies" runat="server"></asp:DropDownList>
+                            <asp:DropDownList ID="ddlAnimalSpecies" runat="server">
+                                <asp:ListItem>Cow</asp:ListItem>
+                                <asp:ListItem>Buffalo</asp:ListItem>
+                                <asp:ListItem>Bunny</asp:ListItem>
+                                <asp:ListItem>Donkey</asp:ListItem>
+                                <asp:ListItem>Goat</asp:ListItem>
+                                <asp:ListItem>Horse</asp:ListItem>               
+                                <asp:ListItem>LLama</asp:ListItem>
+                                <asp:ListItem>Pig</asp:ListItem>
+                                <asp:ListItem>Sheep</asp:ListItem>
+                                <asp:ListItem>Yak</asp:ListItem>
+                            </asp:DropDownList>
                         </td>
                         <td>
                             <asp:Label ID="lblTagNumber" runat="server" Text="Tag Number"></asp:Label>
@@ -36,7 +47,10 @@
                             <asp:Label ID="lblGender" runat="server" Text="Gender"></asp:Label>
                         </td>
                         <td class="auto-style5">
-                            <asp:DropDownList ID="ddlGender" runat="server"></asp:DropDownList>
+                            <asp:DropDownList ID="ddlGender" runat="server">
+                                <asp:ListItem>Male</asp:ListItem>
+                                <asp:ListItem>Female</asp:ListItem>
+                            </asp:DropDownList>
                         </td>
                                                 <td>
                             <asp:Label ID="lblTagColor" runat="server" Text="Tag Color"></asp:Label>
@@ -58,14 +72,6 @@
                         </td>
                         <td>
                             <asp:TextBox ID="txtSpecialInformation" runat="server" TextMode="MultiLine" Height="100px"></asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:Label ID="lblPastureLocation" runat="server" Text="Pasture"></asp:Label>
-                        </td>
-                        <td class="auto-style5">
-                            <asp:DropDownList ID="ddlPastureLocation" runat="server"></asp:DropDownList>
                         </td>
                     </tr>
                     <tr>

@@ -18,7 +18,7 @@ namespace HerdManager.UserStatus
         {
             
             ddlAnimalSpecies.Text = "";
-            ddlPastureLocation.Text = "";
+            
         }
 
         protected void btnSubmit_Click(object sender, EventArgs e)

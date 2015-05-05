@@ -3,7 +3,9 @@
     
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="centerdiv">
+    <div class="outer">
+        <div class="middle">
+            <div class="NewAnimalCenter">
        <table id="LogInTable">
            <tr>
                <td>
@@ -46,5 +48,7 @@
            </tr>
        </table>
    </div>
+            </div>
+        </div>
         
 </asp:Content>

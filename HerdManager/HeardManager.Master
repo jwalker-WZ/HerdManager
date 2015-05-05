@@ -15,43 +15,57 @@
         .auto-style2 {
             width: 89px;
         }
+
         .auto-style3 {
             width: 82px;
         }
+
         .auto-style4 {
             font-size: xx-large;
             color: #FF0066;
+        }
+
+        .auto-style5 {
+            font-size: larger;
+            color: #FFFFFF;
         }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
-    <div id="StatusBar">
-        <div id="Logo" class="auto-style4"><strong>
-<asp:Image ID="Image1" runat="server" CssClass="logoImage" Height="92px" Width="137px" ImageUrl="~/Images/54-Free-Cartoon-Sheep-Clipart-Illustration.png" />
-</strong></div>
-        <div id="LoginInfo">
-            <table id="LoginTable">
-                <tr>
-                    <td class="auto-style3">
-                        <asp:LoginStatus ID="LoginStatus1" runat="server" OnLoggingOut="LoginStatus1_LoggingOut" />
-                    </td>
-                    <td class="auto-style2">
-                        <asp:LoginName ID="LoginName1" runat="server" />
-                    </td>
-                    <td>
-                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/UserStatus/Register.aspx">Register</asp:HyperLink>
-                    </td>
-                </tr>
+        <div id="StatusBar">
+            <div id="Logo" class="auto-style4">
+                <strong>
+                    <asp:Image ID="Image1" runat="server" CssClass="logoImage" Height="92px" Width="137px" ImageUrl="~/Images/cow_silhouette_clip_art_5758.jpg" />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="auto-style5">Herd Manager</span></strong>
+            </div>
+            <div id="LoginInfo">
+                <table id="LoginTable">
+                    <tr>
+                        <td class="auto-style3">
+                            <asp:LoginStatus ID="LoginStatus1" runat="server" OnLoggingOut="LoginStatus1_LoggingOut" />
+                        </td>
+                        <td class="auto-style2">
+                            <asp:LoginName ID="LoginName1" runat="server" />
+                        </td>
+                        <td>
+                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/UserStatus/Register.aspx">Register</asp:HyperLink>
+                        </td>
+                    </tr>
 
-            </table>
+                </table>
+            </div>
         </div>
-    </div>
-    <div style="height: 21px; margin-top: 57px">
+        <div class="nav">
+            <ul>
+                <li class="NewAmimal"><a href="#">New Animal</a></li>              
+                <li class="Pasture"><a href="#">New Pasture</a></li>
+                <li class="ViewAnimal"><a href="#">View Animal</a></li>
+            </ul>
     </div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        
         </asp:ContentPlaceHolder>
     </form>
 </body>
+
 </html>

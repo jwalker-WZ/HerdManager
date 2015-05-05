@@ -62,7 +62,10 @@
     <Content Include="css\Content.css" />
     <Content Include="css\MasterPage.css" />
     <Content Include="Images\54-Free-Cartoon-Sheep-Clipart-Illustration.png" />
+    <Content Include="Images\cow_silhouette_clip_art_5758.jpg" />
     <Content Include="Site\DatabaseTesting.aspx" />
+    <Content Include="Site\VetWork.aspx" />
+    <Content Include="Site\ViewAnimal.aspx" />
     <Content Include="UserStatus\Login.aspx" />
     <Content Include="Site\Main.aspx" />
     <Content Include="Site\NewAnimal.aspx" />
@@ -86,6 +89,20 @@
     </Compile>
     <Compile Include="Site\DatabaseTesting.aspx.designer.cs">
       <DependentUpon>DatabaseTesting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\VetWork.aspx.cs">
+      <DependentUpon>VetWork.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\VetWork.aspx.designer.cs">
+      <DependentUpon>VetWork.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\ViewAnimal.aspx.cs">
+      <DependentUpon>ViewAnimal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\ViewAnimal.aspx.designer.cs">
+      <DependentUpon>ViewAnimal.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserStatus\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

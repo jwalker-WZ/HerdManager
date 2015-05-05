@@ -4,23 +4,6 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
-    <div id="NavBar">
-        <a href="AnimalDescription.aspx">
-            Animal Description
-        </a>
-        <a href="NewAnimal.aspx">
-            New Animal
-        </a>
-        <a href="Pasture.aspx">
-            New Pasture
-        </a>
-        <a href="VetWork.aspx">
-            Vet Work
-        </a>
-        <a href="RentOrShare.aspx">
-            Rent Or Share
-        </a>
-    </div>
     <div class="centerdiv">
        <table id="LogInTable">
           <tr>

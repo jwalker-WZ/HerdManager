@@ -38,7 +38,8 @@
             <div id="Logo" class="auto-style4">
                 <table>
                     <tr>
-                        <td><asp:Image ID="Image1" runat="server" CssClass="logoImage" Height="92px" Width="137px" ImageUrl="~/Images/cow_silhouette_clip_art_5758.jpg" /></td>
+                        <td>
+                            <asp:Image ID="Image1" runat="server" CssClass="logoImage" Height="92px" Width="137px" ImageUrl="~/Images/cow_silhouette_clip_art_5758.jpg" /></td>
                         <td><strong><span class="auto-style5">Herd Manager</span></strong></td>
                     </tr>
                 </table>
@@ -60,13 +61,16 @@
                 </table>
             </div>
         </div>
+        <%if (Session["UserName"] != null)
+          { %>
         <div class="nav">
             <ul>
-                <li class="NewAmimal"><a href="#">New Animal</a></li>              
+                <li class="NewAmimal"><a href="#">New Animal</a></li>
                 <li class="Pasture"><a href="#">New Pasture</a></li>
                 <li class="ViewAnimal"><a href="#">View Animal</a></li>
             </ul>
-    </div>
+        </div>
+        <% }%>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
     </form>

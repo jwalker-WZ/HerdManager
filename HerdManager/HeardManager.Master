@@ -28,6 +28,7 @@
         .auto-style5 {
             font-size: larger;
             color: #FFFFFF;
+            text-align: center;
         }
     </style>
 </head>
@@ -35,9 +36,12 @@
     <form id="form1" runat="server">
         <div id="StatusBar">
             <div id="Logo" class="auto-style4">
-                <strong>
-                    <asp:Image ID="Image1" runat="server" CssClass="logoImage" Height="92px" Width="137px" ImageUrl="~/Images/cow_silhouette_clip_art_5758.jpg" />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="auto-style5">Herd Manager</span></strong>
+                <table>
+                    <tr>
+                        <td><asp:Image ID="Image1" runat="server" CssClass="logoImage" Height="92px" Width="137px" ImageUrl="~/Images/cow_silhouette_clip_art_5758.jpg" /></td>
+                        <td><strong><span class="auto-style5">Herd Manager</span></strong></td>
+                    </tr>
+                </table>
             </div>
             <div id="LoginInfo">
                 <table id="LoginTable">

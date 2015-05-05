@@ -22,18 +22,7 @@
                             <asp:Label ID="lblAnimalSpecies" runat="server" Text="Species"></asp:Label>
                         </td>
                         <td class="auto-style5">
-                            <asp:DropDownList ID="ddlAnimalSpecies" runat="server">
-                                <asp:ListItem>Cow</asp:ListItem>
-                                <asp:ListItem>Buffalo</asp:ListItem>
-                                <asp:ListItem>Bunny</asp:ListItem>
-                                <asp:ListItem>Donkey</asp:ListItem>
-                                <asp:ListItem>Goat</asp:ListItem>
-                                <asp:ListItem>Horse</asp:ListItem>               
-                                <asp:ListItem>LLama</asp:ListItem>
-                                <asp:ListItem>Pig</asp:ListItem>
-                                <asp:ListItem>Sheep</asp:ListItem>
-                                <asp:ListItem>Yak</asp:ListItem>
-                            </asp:DropDownList>
+                            <asp:DropDownList ID="ddlAnimalSpecies" runat="server"></asp:DropDownList>
                         </td>
                         <td>
                             <asp:Label ID="lblTagNumber" runat="server" Text="Tag Number"></asp:Label>
@@ -104,6 +93,7 @@
                         </td>
                         <td class="auto-style5">
                             <asp:Button ID="btnClear" runat="server" Text="Clear" OnClick="btnClear_Click" />
+                            <asp:Label ID="lblFailed" runat="server"></asp:Label>
                         </td>
                     </tr>
                 </table>

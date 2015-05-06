@@ -16,5 +16,10 @@ namespace HerdManager.Site
         protected void btnClear_Click(object sender, EventArgs e)
         {
         }
+
+        protected void SubmitVetWork(object sender, EventArgs e)
+        {
+
+        }
 	}
 }

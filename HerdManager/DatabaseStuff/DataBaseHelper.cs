@@ -273,5 +273,17 @@ namespace HerdManager.DatabaseStuff
             dr.Close();
             return species;
         }
+        public static bool AddVetWork(DateTime WorkDate, string performedBy, string vetWorkDone, int AnimalID)
+        {
+            if (conn.State == ConnectionState.Open)
+            {
+
+            }
+            else
+            {
+                return false;
+            }
+            return true;
+        }
     }
 }

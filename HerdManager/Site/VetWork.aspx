@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HeardManager.Master" AutoEventWireup="true" CodeBehind="VetWork.aspx.cs" Inherits="HerdManager.UserStatus.VetWork" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HeardManager.Master" AutoEventWireup="true" CodeBehind="VetWork.aspx.cs" Inherits="HerdManager.Site.VetWork" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     
 </asp:Content>
@@ -36,7 +36,7 @@
                    <asp:Button ID="btnClear" runat="server" Text="Clear" />
                </td>
                <td>
-                   <asp:Button ID="btnSubmit" runat="server" Text="Submit" />
+                   <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="SubmitVetWork" />
                </td>
            </tr>
        </table>

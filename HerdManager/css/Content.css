@@ -36,3 +36,39 @@
     background-color: black;
     color: white;
 }
+.ViewAnimalCenter{
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+#ViewAnimalTable{
+    background-color:gray;
+}
+#ViewAnimalTable th{
+    background-color: black;
+    color: white;
+}
+.VetWorkCenter{
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+#VetWorkTable{
+    background-color:gray;
+}
+#VetWorkTable th{
+    background-color: black;
+    color: white;
+}
+.NewPastureCenter{
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+#PastureTable{
+    background-color:gray;
+}
+#PastureTable th{
+    background-color: black;
+    color: white;
+}

@@ -49,31 +49,31 @@ namespace HerdManager.UserStatus {
         protected global::System.Web.UI.WebControls.Image Image1;
         
         /// <summary>
-        /// LoginStatus1 control.
+        /// lbtnNewAnimal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LoginStatus LoginStatus1;
+        protected global::System.Web.UI.WebControls.LinkButton lbtnNewAnimal;
         
         /// <summary>
-        /// LoginName1 control.
+        /// lbnPasture control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LoginName LoginName1;
+        protected global::System.Web.UI.WebControls.LinkButton lbnPasture;
         
         /// <summary>
-        /// HyperLink1 control.
+        /// lbtnVetWork control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
+        protected global::System.Web.UI.WebControls.LinkButton lbtnVetWork;
         
         /// <summary>
         /// ContentPlaceHolder1 control.

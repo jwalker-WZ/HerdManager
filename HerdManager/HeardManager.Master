@@ -46,17 +46,6 @@
             </div>
             <div id="LoginInfo">
                 <table id="LoginTable">
-                    <tr>
-                        <td class="auto-style3">
-                            <asp:LoginStatus ID="LoginStatus1" runat="server" OnLoggingOut="LoginStatus1_LoggingOut" />
-                        </td>
-                        <td class="auto-style2">
-                            <asp:LoginName ID="LoginName1" runat="server" />
-                        </td>
-                        <td>
-                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/UserStatus/Register.aspx">Register</asp:HyperLink>
-                        </td>
-                    </tr>
 
                 </table>
             </div>
@@ -65,9 +54,9 @@
           { %>
         <div class="nav">
             <ul>
-                <li class="NewAmimal"><a href="#">New Animal</a></li>
-                <li class="Pasture"><a href="#">New Pasture</a></li>
-                <li class="ViewAnimal"><a href="#">View Animal</a></li>
+                <asp:LinkButton ID="lbtnNewAnimal" runat="server" PostBackUrl="~/Site/NewAnimal.aspx">New Animal    </asp:LinkButton>
+                <asp:LinkButton ID="lbnPasture" runat="server" PostBackUrl="~/Site/Pasture.aspx">New Pasture    </asp:LinkButton>
+                <asp:LinkButton ID="lbtnVetWork" runat="server" PostBackUrl="~/Site/VetWork.aspx">New Vet Work</asp:LinkButton>
             </ul>
         </div>
         <% }%>

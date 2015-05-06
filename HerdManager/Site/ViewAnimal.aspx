@@ -5,8 +5,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="outer">
         <div class="middle">
-            <div class="NewAnimalCenter">
-       <table id="LogInTable">
+            <div class="ViewAnimalCenter">
+       <table id="ViewAnimalTable">
            <tr>
                <td>
                    <asp:GridView ID="gdvAnimals" runat="server">

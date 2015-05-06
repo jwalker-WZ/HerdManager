@@ -1,11 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/HeardManager.Master" AutoEventWireup="true" CodeBehind="VetWork.aspx.cs" Inherits="HerdManager.UserStatus.VetWork" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="servesr">
     
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="outer">
         <div class="middle">
-            <div class="NewAnimalCenter">
+            <div class="VetWorkCenter">
        <table id="VetWorkTable">
            <tr>
                <td>

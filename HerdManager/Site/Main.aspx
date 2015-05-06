@@ -16,6 +16,7 @@
            <tr>
                <td>
                 <asp:LinkButton ID="lbtnAddNew" runat="server" Text="New Animal" PostBackUrl="~/Site/NewAnimal.aspx"></asp:LinkButton>
+                   <asp:LinkButton ID="lbtnViewAnimal" runat="server">View Animal</asp:LinkButton>
                    </td>
            </tr>
        </table>

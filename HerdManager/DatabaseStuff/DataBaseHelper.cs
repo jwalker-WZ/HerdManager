@@ -11,7 +11,7 @@ namespace HerdManager.DatabaseStuff
 {
     public static class DataBaseHelper
     {
-        static string connString = "Server=rei.cs.ndsu.nodak.edu;Database=csci366_hmanager;Uid=csci366_hmanager;Pwd=;";
+        static string connString = "Server=rei.cs.ndsu.nodak.edu;Database=csci366_hmanager;Uid=csci366_hmanager;Pwd=fWm3gVtMWS;";
         static MySqlConnection conn;
         static MySqlCommand comm;
         static MySqlDataAdapter da;
@@ -128,13 +128,21 @@ namespace HerdManager.DatabaseStuff
         {
             if (conn.State == ConnectionState.Open)
             {
-                string commandString = "SELECT * FROM AccountHolder";
+                string commandString = "SELECT * FROM Animal "+
+                "INNER JOIN Tag ON Animal.ID=Tag.AnimalID "+
+                "INNER JOIN AnimalDescription ON Tag.AnimalID=AnimalDescription.AnimalID;";
                 comm = new MySqlCommand(commandString, conn);
                 da = new MySqlDataAdapter(comm);
                 DataTable dt = new DataTable();
                 try
                 {
                     da.Fill(dt);
+                    dt.Columns.Remove("ID");
+                    dt.Columns.Remove("ID1");
+                    dt.Columns.Remove("ID2");
+                    dt.Columns.Remove("AnimalID");
+                    dt.Columns.Remove("AnimalID1");
+                    dt.Columns.Remove("AccountHolder");
                     return dt;
                 }
                 catch (Exception ex) { return null; }
@@ -165,6 +173,9 @@ namespace HerdManager.DatabaseStuff
                     }
                 }
                 catch (Exception ex) { return false; }
+                int AnimalID;
+                comm.CommandText = "SELECT ID From Animal WHERE ID=Last_Insert_ID()";
+                AnimalID = (int)comm.ExecuteScalar();
                 //create the tag
                 comm.CommandText = "INSERT INTO Tag(TagNumber, TagColor, SpecialInformation, AnimalID) VALUES(@TagNumber, @TagColor, @SpecialInfo" +
                 ", LAST_INSERT_ID());";
@@ -183,6 +194,32 @@ namespace HerdManager.DatabaseStuff
                     }
                 }
                 catch (Exception ex) { return false; }
+                comm.CommandText = "INSERT INTO AnimalDescription(Gender, BirthDate, SellOrDeathDate, Temperment, Notes, AnimalID) "+
+                    "VALUES(@Gender, @BirthDate, @SellOrDeathDate, @Temperment, @Notes, "+ AnimalID.ToString() + ")";
+                comm.Parameters.Add("@Gender", MySqlDbType.VarChar).Value = gender;
+                comm.Parameters.Add("@BirthDate", MySqlDbType.Date).Value = birthDate.Date;
+                comm.Parameters.Add("@SellOrDeathDate", MySqlDbType.Date).Value = sellodeath.Date;
+                comm.Parameters.Add("@Temperment", MySqlDbType.VarChar).Value = temperment;
+                comm.Parameters.Add("@Notes", MySqlDbType.VarChar).Value = notes;
+                try
+                {
+                    int numRows = comm.ExecuteNonQuery();
+                    if (numRows == 0)
+                    {
+                        comm.CommandText = "DELETE FROM Tag WHERE ID=Last_Insert_ID()";
+                        comm.ExecuteNonQuery();
+                        comm.CommandText = "DELETE FROM Animal WHERE ID='" + AnimalID.ToString() + "'";
+                        comm.ExecuteNonQuery();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    comm.CommandText = "DELETE FROM Tag WHERE ID=Last_Insert_ID()";
+                    comm.ExecuteNonQuery();
+                    comm.CommandText = "DELETE FROM Animal WHERE ID='" + AnimalID.ToString() + "'";
+                    comm.ExecuteNonQuery();
+                    return false;
+                }
             }
             else
             {

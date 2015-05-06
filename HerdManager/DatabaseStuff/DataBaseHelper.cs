@@ -11,7 +11,7 @@ namespace HerdManager.DatabaseStuff
 {
     public static class DataBaseHelper
     {
-        static string connString = "Server=rei.cs.ndsu.nodak.edu;Database=csci366_hmanager;Uid=csci366_hmanager;Pwd=fWm3gVtMWS;";
+        static string connString = "Server=rei.cs.ndsu.nodak.edu;Database=csci366_hmanager;Uid=csci366_hmanager;Pwd=;";
         static MySqlConnection conn;
         static MySqlCommand comm;
         static MySqlDataAdapter da;

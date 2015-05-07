@@ -54,9 +54,10 @@
           { %>
         <div class="nav">
             <ul>
-                <asp:LinkButton ID="lbtnNewAnimal" runat="server" PostBackUrl="~/Site/NewAnimal.aspx">New Animal</asp:LinkButton>
-                <asp:LinkButton ID="lbnPasture" runat="server" PostBackUrl="~/Site/Pasture.aspx">     New Pasture</asp:LinkButton>
-                <asp:LinkButton ID="lbtnVetWork" runat="server" PostBackUrl="~/Site/VetWork.aspx">     New Vet Work</asp:LinkButton>
+                <asp:LinkButton ID="lbtnMain" runat="server" PostBackUrl="~/Site/Main.aspx">Main </asp:LinkButton>
+                <asp:LinkButton ID="lbtnNewAnimal" runat="server" PostBackUrl="~/Site/NewAnimal.aspx">  New Animal </asp:LinkButton>
+                <asp:LinkButton ID="lbnPasture" runat="server" PostBackUrl="~/Site/Pasture.aspx">     New Pasture </asp:LinkButton>
+                <asp:LinkButton ID="lbtnVetWork" runat="server" PostBackUrl="~/Site/VetWork.aspx">     New Vet Work </asp:LinkButton>
                 <asp:LinkButton ID="lbtnRentShare" runat="server">     Rent Or Share</asp:LinkButton>
             </ul>
         </div>

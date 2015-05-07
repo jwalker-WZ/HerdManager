@@ -41,14 +41,14 @@
       text-align: center;
       padding: 0;
       margin: 0;
-      height:100px;
+      height:50px;
       
     }
 .nav li {
       font-family: 'Oswald', sans-serif;
-      font-size: 2.2em;
-      line-height: 100px;
-      height: 40px;
+      font-size:50px;
+      line-height: 50px;
+      height: 50px;
       border-bottom: 1px solid #888;
     }
 .nav a {

@@ -11,7 +11,7 @@ namespace HerdManager.DatabaseStuff
 {
     public static class DataBaseHelper
     {
-        static string connString = "Server=rei.cs.ndsu.nodak.edu;Database=csci366_hmanager;Uid=csci366_hmanager;Pwd=fWm3gVtMWS;";
+        static string connString = "Server=rei.cs.ndsu.nodak.edu;Database=csci366_hmanager;Uid=csci366_hmanager;Pwd=;";
         static MySqlConnection conn;
         static MySqlCommand comm;
         static MySqlDataAdapter da;
@@ -272,6 +272,18 @@ namespace HerdManager.DatabaseStuff
             catch (Exception ex) { dr.Close();  return null; }
             dr.Close();
             return species;
+        }
+        public static bool AddVetWork(DateTime WorkDate, string performedBy, string vetWorkDone, int AnimalID)
+        {
+            if (conn.State == ConnectionState.Open)
+            {
+
+            }
+            else
+            {
+                return false;
+            }
+            return true;
         }
     }
 }

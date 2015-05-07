@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HerdManager.UserStatus {
+namespace HerdManager.Site {
     
     
     public partial class VetWork {

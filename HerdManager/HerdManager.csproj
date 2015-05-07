@@ -61,6 +61,7 @@
   <ItemGroup>
     <Content Include="css\Content.css" />
     <Content Include="css\MasterPage.css" />
+    <Content Include="Default.aspx" />
     <Content Include="Images\54-Free-Cartoon-Sheep-Clipart-Illustration.png" />
     <Content Include="Images\cow_silhouette_clip_art_5758.jpg" />
     <Content Include="Site\DatabaseTesting.aspx" />
@@ -75,6 +76,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DatabaseStuff\DataBaseHelper.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="HeardManager.Master.cs">
       <DependentUpon>HeardManager.Master</DependentUpon>
@@ -142,6 +150,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="HeardManager.Master" />
+    <None Include="Properties\PublishProfiles\Default Settings.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

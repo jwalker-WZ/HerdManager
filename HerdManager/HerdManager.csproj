@@ -65,6 +65,7 @@
     <Content Include="Images\54-Free-Cartoon-Sheep-Clipart-Illustration.png" />
     <Content Include="Images\cow_silhouette_clip_art_5758.jpg" />
     <Content Include="Site\DatabaseTesting.aspx" />
+    <Content Include="Site\RentShare.aspx" />
     <Content Include="Site\VetWork.aspx" />
     <Content Include="Site\ViewAnimal.aspx" />
     <Content Include="UserStatus\Login.aspx" />
@@ -97,6 +98,13 @@
     </Compile>
     <Compile Include="Site\DatabaseTesting.aspx.designer.cs">
       <DependentUpon>DatabaseTesting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\RentShare.aspx.cs">
+      <DependentUpon>RentShare.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\RentShare.aspx.designer.cs">
+      <DependentUpon>RentShare.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site\VetWork.aspx.cs">
       <DependentUpon>VetWork.aspx</DependentUpon>

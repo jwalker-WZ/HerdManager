@@ -72,3 +72,15 @@
     background-color: black;
     color: white;
 }
+.RentShareCenter{
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+#RentShareTable{
+    background-color:gray;
+}
+#RentShareTable th{
+    background-color: black;
+    color: white;
+}

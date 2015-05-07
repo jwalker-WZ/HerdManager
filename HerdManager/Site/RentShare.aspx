@@ -49,6 +49,22 @@
                     </tr>
                     <tr>
                         <td>
+                            <asp:Label ID="lblStartDate" runat="server" Text="Start Date"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:Calendar ID="calStart" runat="server"></asp:Calendar>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:Label ID="lblEndDate" runat="server" Text="End Date"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:Calendar ID="calEnd" runat="server"></asp:Calendar>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
                             <asp:Button ID="btnSubmit" runat="server" Text="Submit" />
                         </td>
                         <td>

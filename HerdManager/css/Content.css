@@ -84,3 +84,15 @@
     background-color: black;
     color: white;
 }
+.MainCenter{
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+#MainTable{
+    background-color:gray;
+}
+#MainTable th{
+    background-color: black;
+    color: white;
+}

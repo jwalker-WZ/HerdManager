@@ -21,6 +21,5 @@ C:\Users\Owner\Documents\GitHub\HerdManager\HerdManager\bin\HerdManager.dll.conf
 C:\Users\Owner\Documents\GitHub\HerdManager\HerdManager\bin\HerdManager.dll
 C:\Users\Owner\Documents\GitHub\HerdManager\HerdManager\bin\HerdManager.pdb
 C:\Users\Owner\Documents\GitHub\HerdManager\HerdManager\bin\MySql.Web.v20.dll
-C:\Users\Owner\Documents\GitHub\HerdManager\HerdManager\obj\Debug\HerdManager.csprojResolveAssemblyReference.cache
 C:\Users\Owner\Documents\GitHub\HerdManager\HerdManager\obj\Debug\HerdManager.dll
 C:\Users\Owner\Documents\GitHub\HerdManager\HerdManager\obj\Debug\HerdManager.pdb

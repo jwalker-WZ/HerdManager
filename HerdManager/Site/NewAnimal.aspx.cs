@@ -18,7 +18,26 @@ namespace HerdManager.UserStatus
                 {
                     foreach (string item in SpeciesOptions)
                     {
-                        ddlAnimalSpecies.Items.Add(item);
+                        ListItem li = new ListItem(item, item);
+                        ddlAnimalSpecies.Items.Add(li);
+                    }
+                }
+                if ((bool)Session["EditMode"] == true)
+                {
+                    GridViewRow gr = (GridViewRow)Session["EditRow"];
+                    txtColor.Text = gr.Cells[4].ToString();
+                    txtNotes.Text = gr.Cells[10].ToString();
+                    txtSpecialInformation.Text = gr.Cells[5].ToString();
+                    txtTagNumber.Text = gr.Cells[3].ToString();
+                    txtTemperment.Text = gr.Cells[9].ToString();
+                    ddlAnimalSpecies.SelectedValue = gr.Cells[11].ToString();
+                    ddlGender.SelectedValue = gr.Cells[6].ToString();
+                    string s = gr.Cells[7].ToString();
+                    calBirthDate.SelectedDate = (DateTime.Parse(s)).Date;
+                    string date = gr.Cells[8].ToString();
+                    if (date != "1/1/0001 12:00:00 AM")
+                    {
+                        calSellDeathDate.SelectedDate = DateTime.Parse(date).Date;
                     }
                 }
             }
@@ -40,6 +59,11 @@ namespace HerdManager.UserStatus
             {
                 lblFailed.Text = "Addition Failed!";
             }
+            else
+            {
+                Response.Redirect("/Site/Main.aspx");
+            }
+
         }
     }
 }

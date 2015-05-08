@@ -19,7 +19,7 @@ namespace HerdManager.Site
 
         protected void SubmitVetWork(object sender, EventArgs e)
         {
-
+            Response.Redirect("/Site/Main.aspx");
         }
 	}
 }

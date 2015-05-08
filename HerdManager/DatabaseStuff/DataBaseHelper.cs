@@ -11,7 +11,7 @@ namespace HerdManager.DatabaseStuff
 {
     public static class DataBaseHelper
     {
-        static string connString = "Server=rei.cs.ndsu.nodak.edu;Database=csci366_hmanager;Uid=csci366_hmanager;Pwd=;";
+        static string connString = "Server=rei.cs.ndsu.nodak.edu;Database=csci366_hmanager;Uid=csci366_hmanager;Pwd=fWm3gVtMWS;";
         static MySqlConnection conn;
         static MySqlCommand comm;
         static MySqlDataAdapter da;
@@ -124,25 +124,29 @@ namespace HerdManager.DatabaseStuff
             }
         }
 
-        public static DataTable GetAllAnimals()
+        public static DataTable GetAllAnimals(string username)
         {
             if (conn.State == ConnectionState.Open)
             {
                 string commandString = "SELECT * FROM Animal "+
                 "INNER JOIN Tag ON Animal.ID=Tag.AnimalID "+
-                "INNER JOIN AnimalDescription ON Tag.AnimalID=AnimalDescription.AnimalID;";
+                "INNER JOIN AnimalDescription ON Tag.AnimalID=AnimalDescription.AnimalID " +
+                "INNER JOIN Species ON Animal.Species=Species.ID "+
+                " WHERE Animal.AccountHolder = (SELECT ID FROM AccountHolder WHERE LogInInfo=(SELECT ID FROM HolderLogin WHERE Uname=@username));";
                 comm = new MySqlCommand(commandString, conn);
+                comm.Parameters.Add("@username", MySqlDbType.VarChar).Value = username;
                 da = new MySqlDataAdapter(comm);
                 DataTable dt = new DataTable();
                 try
                 {
                     da.Fill(dt);
-                    dt.Columns.Remove("ID");
                     dt.Columns.Remove("ID1");
                     dt.Columns.Remove("ID2");
                     dt.Columns.Remove("AnimalID");
                     dt.Columns.Remove("AnimalID1");
                     dt.Columns.Remove("AccountHolder");
+                    dt.Columns.Remove("Species");
+                    dt.Columns.Remove("ID3");
                     return dt;
                 }
                 catch (Exception ex) { return null; }
@@ -278,6 +282,21 @@ namespace HerdManager.DatabaseStuff
             if (conn.State == ConnectionState.Open)
             {
 
+            }
+            else
+            {
+                return false;
+            }
+            return true;
+        }
+        public static bool RemoveAnimal(int AnimalID)
+        {
+            if (conn.State == ConnectionState.Open)
+            {
+                comm = new MySqlCommand("DELETE FROM Animal WHERE ID=@id;", conn);
+                comm.Parameters.Add("@id", MySqlDbType.UInt32).Value = AnimalID;
+                comm.ExecuteNonQuery();
+                
             }
             else
             {

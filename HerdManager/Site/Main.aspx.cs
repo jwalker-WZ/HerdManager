@@ -12,18 +12,26 @@ namespace HerdManager.Site
         protected void Page_Load(object sender, EventArgs e)
         {
             DatabaseStuff.DataBaseHelper.Connect();
-            gdvAnimals.DataSource = DatabaseStuff.DataBaseHelper.GetAllAnimals();
+            gdvAnimals.DataSource = DatabaseStuff.DataBaseHelper.GetAllAnimals(Session["UserName"].ToString());
             gdvAnimals.DataBind();
-        }
-
-        protected void gdvAnimals_RowDeleted(object sender, GridViewDeletedEventArgs e)
-        {
-
         }
 
         protected void gdvAnimals_RowEditing(object sender, GridViewEditEventArgs e)
         {
+            Session["EditMode"] = true;
+            Session["EditRow"] = gdvAnimals.Rows[e.NewEditIndex];
+            Response.Redirect("/Site/NewAnimal.aspx");
+        }
 
+        protected void gdvAnimals_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            string str = gdvAnimals.Rows[e.RowIndex].Cells[1].Text;
+            gdvAnimals.Rows[e.RowIndex].Dispose();
+            bool retv = DatabaseStuff.DataBaseHelper.RemoveAnimal(int.Parse(str));
+            if (!retv)
+            {
+
+            }
         }
     }
 }

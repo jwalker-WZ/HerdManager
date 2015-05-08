@@ -64,7 +64,6 @@
     <Content Include="Default.aspx" />
     <Content Include="Images\54-Free-Cartoon-Sheep-Clipart-Illustration.png" />
     <Content Include="Images\cow_silhouette_clip_art_5758.jpg" />
-    <Content Include="Site\DatabaseTesting.aspx" />
     <Content Include="Site\RentShare.aspx" />
     <Content Include="Site\VetWork.aspx" />
     <Content Include="Site\ViewAnimal.aspx" />
@@ -91,13 +90,6 @@
     </Compile>
     <Compile Include="HeardManager.Master.designer.cs">
       <DependentUpon>HeardManager.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Site\DatabaseTesting.aspx.cs">
-      <DependentUpon>DatabaseTesting.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Site\DatabaseTesting.aspx.designer.cs">
-      <DependentUpon>DatabaseTesting.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site\RentShare.aspx.cs">
       <DependentUpon>RentShare.aspx</DependentUpon>
@@ -159,6 +151,7 @@
   <ItemGroup>
     <Content Include="HeardManager.Master" />
     <None Include="Properties\PublishProfiles\Default Settings.pubxml" />
+    <None Include="Properties\PublishProfiles\diff.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
